@@ -1,3 +1,52 @@
 @import "variables";
 @import "mixins";
 @import "reboot";
+
+.twitter-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: $basic-padding-y $basic-padding-x;
+  border-bottom: 1px solid $border-color;
+  .btn-login {
+    @include btn-variant(transparent, $primary-color);
+  }
+  .btn-register {
+    @include btn-variant($primary-color, white);
+  }
+}
+main {
+  margin-top: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  border-radius: 10px;
+  height: 100%;
+}
+.content {
+  display: flex;
+  justify-content: space-around;
+  border-radius: 10px;
+  height: 100%;
+  @include form-variant(400px, 330px);
+  p {
+    align-self: center;
+    font-size: 20px;
+    color: $white;
+  }
+  a {
+    @include link-variant($primary-color, $white, none);
+    align-items: flex-start;
+  }
+  .or {
+    align-self: center;
+    font-size: 10px;
+  }
+
+  .login {
+    @include btn-variant(transparent, $primary-color);
+  }
+  .register {
+    @include btn-variant($primary-color, white);
+  }
+}

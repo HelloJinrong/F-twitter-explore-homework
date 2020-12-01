@@ -2,3 +2,28 @@
   margin-top: 0;
   font-size: $font-size;
 }
+@mixin form-variant($height, $width) {
+  display: flex;
+  flex-flow: column;
+  border: 1px solid $border-color;
+  border-radius: 10px;
+  padding: $basic-padding-y $basic-padding-x;
+  height: $height;
+  width: $width;
+}
+
+@mixin link-variant($color, $hover-color, $decoration: false) {
+  color: $color;
+  text-decoration: $decoration;
+  &:hover {
+    color: $hover-color;
+  }
+}
+
+@mixin btn-variant($bg-color, $color) {
+  padding: 3px 30px;
+  border-radius: 60px;
+  border: 1px solid $primary-color;
+  background-color: $bg-color;
+  color: $color;
+}
